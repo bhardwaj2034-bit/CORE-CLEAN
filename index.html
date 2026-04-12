@@ -10,46 +10,151 @@
         .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f9e29c 100%); }
         .dark-teal { background-color: #0d3b3f; }
         .text-gold { color: #d4af37; }
+        .lang-btn { cursor: pointer; transition: all 0.3s; }
+        .lang-btn:hover { color: #d4af37; }
+        [lang="lt"] { display: none; } /* Hide LT by default */
     </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
-    <nav class="dark-teal p-4 text-white flex justify-between items-center sticky top-0 z-50 shadow-lg">
-        <h1 class="text-2xl font-bold tracking-widest uppercase">Core <span class="text-gold">Clean</span></h1>
-        <a href="https://wa.me/37063818400" class="gold-gradient text-black px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition shadow-md">BOOK NOW</a>
+<body class="bg-gray-50 font-sans text-gray-900 leading-relaxed">
+
+    <div class="bg-black text-white px-6 py-2 flex justify-between items-center text-xs font-bold uppercase tracking-widest">
+        <div>Vilnius, Lithuania</div>
+        <div class="flex gap-4">
+            <span onclick="setLanguage('en')" class="lang-btn text-gold">EN</span>
+            <span class="opacity-30">|</span>
+            <span onclick="setLanguage('lt')" class="lang-btn">LT</span>
+        </div>
+    </div>
+
+    <nav class="dark-teal p-5 text-white flex justify-between items-center sticky top-0 z-50 shadow-2xl">
+        <h1 class="text-2xl font-bold tracking-widest uppercase italic">Core <span class="text-gold uppercase not-italic">Clean</span></h1>
+        <a href="https://wa.me/37064399422" class="gold-gradient text-black px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition shadow-lg">
+            <span class="en">BOOK NOW</span>
+            <span class="lt">RESERVUOTI</span>
+        </a>
     </nav>
-    <header class="relative h-[60vh] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6958?auto=format&fit=crop&w=1200&q=80');">
-        <div class="px-4">
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-4 uppercase tracking-tight">The 5-Star Hotel Feeling,<br>Right in Your Home.</h2>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90 text-gray-200">Premium cleaning services in Vilnius. Elite quality. Fixed pricing.</p>
-            <a href="https://wa.me/37063818400" class="gold-gradient text-black px-8 py-4 rounded-lg font-bold uppercase tracking-wider shadow-xl hover:brightness-110">Get a Free Quote</a>
+
+    <header class="relative h-[60vh] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6958?auto=format&fit=crop&w=1200&q=80');">
+        <div class="px-4 max-w-3xl">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tighter">
+                <span class="en">Premium Cleaning for <br><span class="text-gold">Modern Living</span></span>
+                <span class="lt">Aukščiausios kokybės <br><span class="text-gold">valymo paslaugos</span></span>
+            </h2>
+            <p class="text-lg md:text-xl mb-8 opacity-90 font-light">
+                <span class="en">The highest standard of cleanliness in Vilnius. Professional, reliable, and fixed pricing.</span>
+                <span class="lt">Aukščiausias švaros standartas Vilniuje. Profesionalu, patikima ir fiksuotos kainos.</span>
+            </p>
         </div>
     </header>
-    <section id="prices" class="py-16 bg-gray-100">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12 uppercase tracking-widest text-teal-900 text-center">Our Fixed Price List</h2>
-            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-12 border-2 border-yellow-500 text-left">
-                <div class="gold-gradient p-6"><h3 class="text-2xl font-bold text-black uppercase">Standard General Clean</h3></div>
-                <div class="p-6 text-xl">
-                    <div class="flex justify-between border-b py-4"><span>Studio / 1 Room</span><span class="font-bold">€50</span></div>
-                    <div class="flex justify-between border-b py-4"><span>2 Room Apartment</span><span class="font-bold">€60</span></div>
-                    <div class="flex justify-between py-4"><span>3 Room Apartment</span><span class="font-bold">€70</span></div>
+
+    <section id="prices" class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-widest text-teal-900 underline decoration-gold decoration-4 underline-offset-8">
+            <span class="en">Single Visit Prices</span>
+            <span class="lt">Vienkartinio valymo kainos</span>
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="dark-teal p-6 text-white text-center">
+                    <h3 class="text-xl font-bold uppercase">
+                        <span class="en">General Clean</span>
+                        <span class="lt">Paprastas valymas</span>
+                    </h3>
+                </div>
+                <div class="p-8 space-y-6 text-xl">
+                    <div class="flex justify-between border-b pb-4">
+                        <span><span class="en">Studio / 1 Room</span><span class="lt">Studija / 1 Kamb.</span></span>
+                        <span class="font-bold text-teal-900">€50</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-4">
+                        <span><span class="en">2 Room Apartment</span><span class="lt">2 Kambarių butas</span></span>
+                        <span class="font-bold text-teal-900">€60</span>
+                    </div>
+                    <div class="flex justify-between pb-2">
+                        <span><span class="en">3 Room Apartment</span><span class="lt">3 Kambarių butas</span></span>
+                        <span class="font-bold text-teal-900">€70</span>
+                    </div>
                 </div>
             </div>
-            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-teal-800 text-left">
-                <div class="dark-teal p-6 text-white"><h3 class="text-2xl font-bold uppercase text-gold text-center">Deep Restoration Clean</h3></div>
-                <div class="p-6 text-xl text-center">
-                    <div class="flex justify-between border-b py-4"><span>Studio / 1 Room</span><span class="font-bold">€120</span></div>
-                    <div class="flex justify-between border-b py-4"><span>2 Room Apartment</span><span class="font-bold">€130</span></div>
-                    <div class="flex justify-between py-4"><span>3 Room Apartment</span><span class="font-bold">€180</span></div>
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gold transform md:scale-105">
+                <div class="gold-gradient p-6 text-black text-center">
+                    <h3 class="text-xl font-bold uppercase">
+                        <span class="en">Deep Restoration</span>
+                        <span class="lt">Giluminis valymas</span>
+                    </h3>
+                </div>
+                <div class="p-8 space-y-6 text-xl">
+                    <div class="flex justify-between border-b pb-4">
+                        <span><span class="en">Studio / 1 Room</span><span class="lt">Studija / 1 Kamb.</span></span>
+                        <span class="font-bold text-teal-900">€120</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-4">
+                        <span><span class="en">2 Room Apartment</span><span class="lt">2 Kambarių butas</span></span>
+                        <span class="font-bold text-teal-900">€150</span>
+                    </div>
+                    <div class="flex justify-between pb-2">
+                        <span><span class="en">3 Room Apartment</span><span class="lt">3 Kambarių butas</span></span>
+                        <span class="font-bold text-teal-900">€180</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="bg-black text-white py-12 px-4 text-center">
-        <h1 class="text-3xl font-bold mb-4 uppercase tracking-widest text-gold">Core Clean</h1>
-        <p class="mb-4 opacity-80">Vilnius, Lithuania</p>
-        <p class="text-2xl font-bold mb-6 text-gold">+370 638 18400</p>
-        <p class="text-xs opacity-40">© 2026 Core Clean. All rights reserved.</p>
+
+    <section class="py-20 bg-teal-900 text-white px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4 uppercase tracking-widest text-gold">
+            <span class="en">Subscription Plan</span>
+            <span class="lt">Prenumeratos planas</span>
+        </h2>
+        <p class="mb-12 opacity-80 italic">
+            <span class="en">4 Visits per Month (1 Visit Weekly)</span>
+            <span class="lt">4 apsilankymai per mėnesį (1 kartas per savaitę)</span>
+        </p>
+
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+            <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                <h4 class="text-gold font-bold uppercase mb-4">Combo (3 General + 1 Deep)</h4>
+                <div class="space-y-4">
+                    <div class="flex justify-between"><span>1 Room</span><span class="font-bold">€240/mo</span></div>
+                    <div class="flex justify-between"><span>2 Rooms</span><span class="font-bold">€260/mo</span></div>
+                    <div class="flex justify-between"><span>3 Rooms</span><span class="font-bold">€280/mo</span></div>
+                </div>
+            </div>
+            <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                <h4 class="text-gold font-bold uppercase mb-4">General Only (4 Visits)</h4>
+                <div class="space-y-4">
+                    <div class="flex justify-between"><span>1 Room</span><span class="font-bold">€160/mo</span></div>
+                    <div class="flex justify-between"><span>2 Rooms</span><span class="font-bold">€180/mo</span></div>
+                    <div class="flex justify-between"><span>3 Rooms</span><span class="font-bold">€200/mo</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dark-teal text-white py-16 px-4 text-center">
+        <h1 class="text-4xl font-bold mb-6 uppercase tracking-widest">Core <span class="text-gold italic">Clean</span></h1>
+        <a href="https://wa.me/37064399422" class="text-3xl font-extrabold text-gold hover:opacity-80 transition">+370 643 99422</a>
+        <p class="mt-10 opacity-40 text-[10px] uppercase">© 2026 Core Clean Vilnius.</p>
     </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const enElems = document.querySelectorAll('.en');
+            const ltElems = document.querySelectorAll('.lt');
+            const btns = document.querySelectorAll('.lang-btn');
+            
+            if (lang === 'lt') {
+                enElems.forEach(el => el.style.display = 'none');
+                ltElems.forEach(el => el.style.display = 'inline-block');
+                btns[2].classList.add('text-gold');
+                btns[0].classList.remove('text-gold');
+            } else {
+                enElems.forEach(el => el.style.display = 'inline-block');
+                ltElems.forEach(el => el.style.display = 'none');
+                btns[0].classList.add('text-gold');
+                btns[2].classList.remove('text-gold');
+            }
+        }
+    </script>
 </body>
 </html>
