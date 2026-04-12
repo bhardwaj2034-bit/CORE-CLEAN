@@ -10,151 +10,126 @@
         .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f9e29c 100%); }
         .dark-teal { background-color: #0d3b3f; }
         .text-gold { color: #d4af37; }
-        .lang-btn { cursor: pointer; transition: all 0.3s; }
-        .lang-btn:hover { color: #d4af37; }
-        
-        /* MAGIC FIX: Hides Lithuanian by default so they don't overlap */
-        .lt { display: none; } 
+        .lang-btn { cursor: pointer; transition: 0.3s; }
+        .lt { display: none; } /* Prevents language overlap */
     </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900 leading-relaxed">
+<body class="bg-gray-50 font-sans text-gray-900">
 
-    <div class="bg-black text-white px-6 py-2 flex justify-between items-center text-xs font-bold uppercase tracking-widest">
+    <div class="bg-black text-white px-6 py-2 flex justify-between items-center text-xs font-bold uppercase">
         <div>Vilnius, Lithuania</div>
         <div class="flex gap-4">
-            <span id="en-btn" onclick="setLanguage('en')" class="lang-btn text-gold">EN</span>
+            <span id="en-btn" onclick="setLanguage('en')" class="lang-btn text-gold underline">EN</span>
             <span class="opacity-30">|</span>
             <span id="lt-btn" onclick="setLanguage('lt')" class="lang-btn">LT</span>
         </div>
     </div>
 
-    <nav class="dark-teal p-5 text-white flex justify-between items-center sticky top-0 z-50 shadow-2xl">
-        <h1 class="text-2xl font-bold tracking-widest uppercase italic">Core <span class="text-gold uppercase not-italic">Clean</span></h1>
-        <a href="https://wa.me/37064399422" class="gold-gradient text-black px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition shadow-lg">
-            <span class="en">BOOK NOW</span>
-            <span class="lt">RESERVUOTI</span>
+    <nav class="dark-teal p-5 text-white flex justify-between items-center sticky top-0 z-50 shadow-xl">
+        <h1 class="text-2xl font-bold uppercase italic">Core <span class="text-gold uppercase not-italic">Clean</span></h1>
+        <a href="https://wa.me/37063818400" class="gold-gradient text-black px-6 py-2 rounded-full font-bold text-sm">
+            <span class="en">CONTACT US</span><span class="lt">SUSISIEKITE</span>
         </a>
     </nav>
 
-    <header class="relative h-[60vh] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6958?auto=format&fit=crop&w=1200&q=80');">
-        <div class="px-4 max-w-3xl">
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tighter">
-                <span class="en">Premium Cleaning for <br><span class="text-gold">Modern Living</span></span>
-                <span class="lt">Aukščiausios kokybės <br><span class="text-gold">valymo paslaugos</span></span>
-            </h2>
-        </div>
+    <header class="py-16 bg-white text-center border-b">
+        <h2 class="text-4xl font-extrabold uppercase tracking-tighter text-teal-900">
+            <span class="en">Quality Service at <br><span class="text-gold">Affordable Prices</span></span>
+            <span class="lt">Kokybiškos paslaugos <br><span class="text-gold">už prieinamą kainą</span></span>
+        </h2>
     </header>
 
-    <section id="prices" class="py-20 px-4 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-widest text-teal-900 underline decoration-gold decoration-4 underline-offset-8">
-            <span class="en">Service Prices</span>
-            <span class="lt">Paslaugų kainos</span>
-        </h2>
-        <div class="grid md:grid-cols-2 gap-10">
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-                <div class="dark-teal p-6 text-white text-center font-bold uppercase">
-                    <span class="en">General Clean</span><span class="lt">Paprastas valymas</span>
-                </div>
-                <div class="p-8 space-y-4">
-                    <div class="flex justify-between border-b pb-2">
-                        <span><span class="en">1 Room</span><span class="lt">1 Kambarys</span></span>
-                        <span class="font-bold">€50</span>
-                    </div>
-                    <div class="flex justify-between border-b pb-2">
-                        <span><span class="en">2 Rooms</span><span class="lt">2 Kambariai</span></span>
-                        <span class="font-bold">€60</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span><span class="en">3 Rooms</span><span class="lt">3 Kambariai</span></span>
-                        <span class="font-bold">€70</span>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gold transform md:scale-105">
-                <div class="gold-gradient p-6 text-black text-center font-bold uppercase">
-                    <span class="en">Deep Restoration</span><span class="lt">Giluminis valymas</span>
-                </div>
-                <div class="p-8 space-y-4">
-                    <div class="flex justify-between border-b pb-2">
-                        <span><span class="en">1 Room</span><span class="lt">1 Kambarys</span></span>
-                        <span class="font-bold">€120</span>
-                    </div>
-                    <div class="flex justify-between border-b pb-2">
-                        <span><span class="en">2 Rooms</span><span class="lt">2 Kambariai</span></span>
-                        <span class="font-bold">€150</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span><span class="en">3 Rooms</span><span class="lt">3 Kambariai</span></span>
-                        <span class="font-bold">€180</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-4 max-w-6xl mx-auto bg-white rounded-3xl shadow-sm mb-20">
-        <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-widest text-teal-900">
-            <span class="en">Our Results</span>
-            <span class="lt">Mūsų rezultatai</span>
-        </h2>
+    <section class="py-12 px-4 max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold text-teal-900 mb-8 uppercase border-l-8 border-teal-900 pl-4">
+            <span class="en">1. General Cleaning</span><span class="lt">1. Paprastas valymas</span>
+        </h3>
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="rounded-xl overflow-hidden border-2 border-gray-100 shadow-lg">
-                <div class="grid grid-cols-2">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=60" class="w-full h-48 object-cover opacity-50">
-                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold">BEFORE</span>
-                    </div>
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=400&q=60" class="w-full h-48 object-cover border-l-4 border-gold">
-                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] font-bold px-2 py-1">AFTER</span>
-                    </div>
-                </div>
-                <div class="p-4 text-center text-sm italic text-gray-600">
-                    <span class="en">Kitchen Deep Restoration</span>
-                    <span class="lt">Virtuvės giluminis atstatymas</span>
+            <div class="bg-white p-6 rounded-xl shadow-md border">
+                <h4 class="font-bold text-gold uppercase mb-4"><span class="en">Single Visit</span><span class="lt">Vienkartinis</span></h4>
+                <div class="space-y-3">
+                    <div class="flex justify-between border-b pb-2"><span>1 Room</span><b>€50</b></div>
+                    <div class="flex justify-between border-b pb-2"><span>2 Rooms</span><b>€60</b></div>
+                    <div class="flex justify-between"><span>3 Rooms</span><b>€70</b></div>
                 </div>
             </div>
-            <div class="rounded-xl overflow-hidden border-2 border-gray-100 shadow-lg">
-                <div class="grid grid-cols-2">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=400&q=60" class="w-full h-48 object-cover opacity-50">
-                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold">BEFORE</span>
-                    </div>
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=400&q=60" class="w-full h-48 object-cover border-l-4 border-gold">
-                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] font-bold px-2 py-1">AFTER</span>
-                    </div>
-                </div>
-                <div class="p-4 text-center text-sm italic text-gray-600">
-                    <span class="en">Bathroom Limescale Removal</span>
-                    <span class="lt">Kalkių šalinimas vonioje</span>
+            <div class="bg-teal-50 p-6 rounded-xl shadow-md border border-teal-200">
+                <h4 class="font-bold text-teal-900 uppercase mb-4"><span class="en">Weekly Subscription (4x/mo)</span><span class="lt">Mėnesio prenumerata</span></h4>
+                <div class="space-y-3">
+                    <div class="flex justify-between border-b pb-2"><span>1 Room</span><b>€160/mo</b></div>
+                    <div class="flex justify-between border-b pb-2"><span>2 Rooms</span><b>€180/mo</b></div>
+                    <div class="flex justify-between"><span>3 Rooms</span><b>€200/mo</b></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="dark-teal text-white py-16 px-4 text-center">
-        <h1 class="text-4xl font-bold mb-6 uppercase tracking-widest">Core <span class="text-gold italic">Clean</span></h1>
-        <a href="https://wa.me/37064399422" class="text-3xl font-extrabold text-gold">+370 643 99422</a>
+    <section class="py-12 px-4 max-w-6xl mx-auto bg-gray-100 rounded-3xl">
+        <h3 class="text-2xl font-bold text-teal-900 mb-8 uppercase border-l-8 border-gold pl-4">
+            <span class="en">2. Deep Restoration</span><span class="lt">2. Giluminis valymas</span>
+        </h3>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-md border">
+                <h4 class="font-bold text-gold uppercase mb-4"><span class="en">Single Visit</span><span class="lt">Vienkartinis</span></h4>
+                <div class="space-y-3">
+                    <div class="flex justify-between border-b pb-2"><span>1 Room</span><b>€120</b></div>
+                    <div class="flex justify-between border-b pb-2"><span>2 Rooms</span><b>€150</b></div>
+                    <div class="flex justify-between"><span>3 Rooms</span><b>€180</b></div>
+                </div>
+            </div>
+            <div class="gold-gradient p-6 rounded-xl shadow-md border border-gold">
+                <h4 class="font-bold text-black uppercase mb-4"><span class="en">Elite Combo (3 Gen + 1 Deep)</span><span class="lt">Elite Komplektas</span></h4>
+                <div class="space-y-3">
+                    <div class="flex justify-between border-b border-black/10 pb-2"><span>1 Room</span><b>€240/mo</b></div>
+                    <div class="flex justify-between border-b border-black/10 pb-2"><span>2 Rooms</span><b>€260/mo</b></div>
+                    <div class="flex justify-between"><span>3 Rooms</span><b>€280/mo</b></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 max-w-6xl mx-auto">
+        <h3 class="text-center text-3xl font-bold uppercase mb-12"><span class="en">Our Work</span><span class="lt">Mūsų darbai</span></h3>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="rounded-xl overflow-hidden shadow-lg border-2 border-gold">
+                <div class="grid grid-cols-2">
+                    <img src="https://via.placeholder.com/400x300?text=Before+Photo" class="w-full h-48 object-cover">
+                    <img src="https://via.placeholder.com/400x300?text=After+Photo" class="w-full h-48 object-cover border-l-2 border-gold">
+                </div>
+                <p class="p-3 text-center text-sm italic">Replace these images with your own cleaning photos</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 dark-teal text-white px-4">
+        <h3 class="text-center text-3xl font-bold uppercase mb-12 text-gold"><span class="en">Client Reviews</span><span class="lt">Atsiliepimai</span></h3>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <div class="bg-white/10 p-6 rounded-lg italic">"Best cleaning service in Vilnius. Very professional!" - Jonas K.</div>
+            <div class="bg-white/10 p-6 rounded-lg italic">"Mano butas niekada nebuvo toks švarus. Ačiū!" - Elena V.</div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-12 text-center">
+        <h1 class="text-3xl font-bold mb-4">Core <span class="text-gold italic">Clean</span></h1>
+        <p class="mb-4 opacity-70">Quality of service at an affordable price.</p>
+        <a href="https://wa.me/37063818400" class="text-2xl font-bold text-gold">+370 638 18400</a>
     </footer>
 
     <script>
         function setLanguage(lang) {
-            const enElements = document.querySelectorAll('.en');
-            const ltElements = document.querySelectorAll('.lt');
+            const en = document.querySelectorAll('.en');
+            const lt = document.querySelectorAll('.lt');
             const enBtn = document.getElementById('en-btn');
             const ltBtn = document.getElementById('lt-btn');
-
             if (lang === 'lt') {
-                enElements.forEach(el => el.style.display = 'none');
-                ltElements.forEach(el => el.style.display = 'inline');
-                ltBtn.classList.add('text-gold');
-                enBtn.classList.remove('text-gold');
+                en.forEach(e => e.style.display = 'none');
+                lt.forEach(e => e.style.display = 'inline');
+                ltBtn.classList.add('text-gold', 'underline');
+                enBtn.classList.remove('text-gold', 'underline');
             } else {
-                enElements.forEach(el => el.style.display = 'inline');
-                ltElements.forEach(el => el.style.display = 'none');
-                enBtn.classList.add('text-gold');
-                ltBtn.classList.remove('text-gold');
+                en.forEach(e => e.style.display = 'inline');
+                lt.forEach(e => e.style.display = 'none');
+                enBtn.classList.add('text-gold', 'underline');
+                ltBtn.classList.remove('text-gold', 'underline');
             }
         }
     </script>
