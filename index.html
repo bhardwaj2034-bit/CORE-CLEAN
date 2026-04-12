@@ -12,7 +12,9 @@
         .text-gold { color: #d4af37; }
         .lang-btn { cursor: pointer; transition: all 0.3s; }
         .lang-btn:hover { color: #d4af37; }
-        [lang="lt"] { display: none; } /* Hide LT by default */
+        
+        /* MAGIC FIX: Hides Lithuanian by default so they don't overlap */
+        .lt { display: none; } 
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900 leading-relaxed">
@@ -20,9 +22,9 @@
     <div class="bg-black text-white px-6 py-2 flex justify-between items-center text-xs font-bold uppercase tracking-widest">
         <div>Vilnius, Lithuania</div>
         <div class="flex gap-4">
-            <span onclick="setLanguage('en')" class="lang-btn text-gold">EN</span>
+            <span id="en-btn" onclick="setLanguage('en')" class="lang-btn text-gold">EN</span>
             <span class="opacity-30">|</span>
-            <span onclick="setLanguage('lt')" class="lang-btn">LT</span>
+            <span id="lt-btn" onclick="setLanguage('lt')" class="lang-btn">LT</span>
         </div>
     </div>
 
@@ -40,92 +42,92 @@
                 <span class="en">Premium Cleaning for <br><span class="text-gold">Modern Living</span></span>
                 <span class="lt">Aukščiausios kokybės <br><span class="text-gold">valymo paslaugos</span></span>
             </h2>
-            <p class="text-lg md:text-xl mb-8 opacity-90 font-light">
-                <span class="en">The highest standard of cleanliness in Vilnius. Professional, reliable, and fixed pricing.</span>
-                <span class="lt">Aukščiausias švaros standartas Vilniuje. Profesionalu, patikima ir fiksuotos kainos.</span>
-            </p>
         </div>
     </header>
 
     <section id="prices" class="py-20 px-4 max-w-6xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-widest text-teal-900 underline decoration-gold decoration-4 underline-offset-8">
-            <span class="en">Single Visit Prices</span>
-            <span class="lt">Vienkartinio valymo kainos</span>
+            <span class="en">Service Prices</span>
+            <span class="lt">Paslaugų kainos</span>
         </h2>
-
         <div class="grid md:grid-cols-2 gap-10">
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-                <div class="dark-teal p-6 text-white text-center">
-                    <h3 class="text-xl font-bold uppercase">
-                        <span class="en">General Clean</span>
-                        <span class="lt">Paprastas valymas</span>
-                    </h3>
+                <div class="dark-teal p-6 text-white text-center font-bold uppercase">
+                    <span class="en">General Clean</span><span class="lt">Paprastas valymas</span>
                 </div>
-                <div class="p-8 space-y-6 text-xl">
-                    <div class="flex justify-between border-b pb-4">
-                        <span><span class="en">Studio / 1 Room</span><span class="lt">Studija / 1 Kamb.</span></span>
-                        <span class="font-bold text-teal-900">€50</span>
+                <div class="p-8 space-y-4">
+                    <div class="flex justify-between border-b pb-2">
+                        <span><span class="en">1 Room</span><span class="lt">1 Kambarys</span></span>
+                        <span class="font-bold">€50</span>
                     </div>
-                    <div class="flex justify-between border-b pb-4">
-                        <span><span class="en">2 Room Apartment</span><span class="lt">2 Kambarių butas</span></span>
-                        <span class="font-bold text-teal-900">€60</span>
+                    <div class="flex justify-between border-b pb-2">
+                        <span><span class="en">2 Rooms</span><span class="lt">2 Kambariai</span></span>
+                        <span class="font-bold">€60</span>
                     </div>
-                    <div class="flex justify-between pb-2">
-                        <span><span class="en">3 Room Apartment</span><span class="lt">3 Kambarių butas</span></span>
-                        <span class="font-bold text-teal-900">€70</span>
+                    <div class="flex justify-between">
+                        <span><span class="en">3 Rooms</span><span class="lt">3 Kambariai</span></span>
+                        <span class="font-bold">€70</span>
                     </div>
                 </div>
             </div>
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gold transform md:scale-105">
-                <div class="gold-gradient p-6 text-black text-center">
-                    <h3 class="text-xl font-bold uppercase">
-                        <span class="en">Deep Restoration</span>
-                        <span class="lt">Giluminis valymas</span>
-                    </h3>
+                <div class="gold-gradient p-6 text-black text-center font-bold uppercase">
+                    <span class="en">Deep Restoration</span><span class="lt">Giluminis valymas</span>
                 </div>
-                <div class="p-8 space-y-6 text-xl">
-                    <div class="flex justify-between border-b pb-4">
-                        <span><span class="en">Studio / 1 Room</span><span class="lt">Studija / 1 Kamb.</span></span>
-                        <span class="font-bold text-teal-900">€120</span>
+                <div class="p-8 space-y-4">
+                    <div class="flex justify-between border-b pb-2">
+                        <span><span class="en">1 Room</span><span class="lt">1 Kambarys</span></span>
+                        <span class="font-bold">€120</span>
                     </div>
-                    <div class="flex justify-between border-b pb-4">
-                        <span><span class="en">2 Room Apartment</span><span class="lt">2 Kambarių butas</span></span>
-                        <span class="font-bold text-teal-900">€150</span>
+                    <div class="flex justify-between border-b pb-2">
+                        <span><span class="en">2 Rooms</span><span class="lt">2 Kambariai</span></span>
+                        <span class="font-bold">€150</span>
                     </div>
-                    <div class="flex justify-between pb-2">
-                        <span><span class="en">3 Room Apartment</span><span class="lt">3 Kambarių butas</span></span>
-                        <span class="font-bold text-teal-900">€180</span>
+                    <div class="flex justify-between">
+                        <span><span class="en">3 Rooms</span><span class="lt">3 Kambariai</span></span>
+                        <span class="font-bold">€180</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-teal-900 text-white px-4 text-center">
-        <h2 class="text-3xl font-bold mb-4 uppercase tracking-widest text-gold">
-            <span class="en">Subscription Plan</span>
-            <span class="lt">Prenumeratos planas</span>
+    <section class="py-20 px-4 max-w-6xl mx-auto bg-white rounded-3xl shadow-sm mb-20">
+        <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-widest text-teal-900">
+            <span class="en">Our Results</span>
+            <span class="lt">Mūsų rezultatai</span>
         </h2>
-        <p class="mb-12 opacity-80 italic">
-            <span class="en">4 Visits per Month (1 Visit Weekly)</span>
-            <span class="lt">4 apsilankymai per mėnesį (1 kartas per savaitę)</span>
-        </p>
-
-        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
-            <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
-                <h4 class="text-gold font-bold uppercase mb-4">Combo (3 General + 1 Deep)</h4>
-                <div class="space-y-4">
-                    <div class="flex justify-between"><span>1 Room</span><span class="font-bold">€240/mo</span></div>
-                    <div class="flex justify-between"><span>2 Rooms</span><span class="font-bold">€260/mo</span></div>
-                    <div class="flex justify-between"><span>3 Rooms</span><span class="font-bold">€280/mo</span></div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="rounded-xl overflow-hidden border-2 border-gray-100 shadow-lg">
+                <div class="grid grid-cols-2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=60" class="w-full h-48 object-cover opacity-50">
+                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold">BEFORE</span>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=400&q=60" class="w-full h-48 object-cover border-l-4 border-gold">
+                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] font-bold px-2 py-1">AFTER</span>
+                    </div>
+                </div>
+                <div class="p-4 text-center text-sm italic text-gray-600">
+                    <span class="en">Kitchen Deep Restoration</span>
+                    <span class="lt">Virtuvės giluminis atstatymas</span>
                 </div>
             </div>
-            <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
-                <h4 class="text-gold font-bold uppercase mb-4">General Only (4 Visits)</h4>
-                <div class="space-y-4">
-                    <div class="flex justify-between"><span>1 Room</span><span class="font-bold">€160/mo</span></div>
-                    <div class="flex justify-between"><span>2 Rooms</span><span class="font-bold">€180/mo</span></div>
-                    <div class="flex justify-between"><span>3 Rooms</span><span class="font-bold">€200/mo</span></div>
+            <div class="rounded-xl overflow-hidden border-2 border-gray-100 shadow-lg">
+                <div class="grid grid-cols-2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=400&q=60" class="w-full h-48 object-cover opacity-50">
+                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold">BEFORE</span>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=400&q=60" class="w-full h-48 object-cover border-l-4 border-gold">
+                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] font-bold px-2 py-1">AFTER</span>
+                    </div>
+                </div>
+                <div class="p-4 text-center text-sm italic text-gray-600">
+                    <span class="en">Bathroom Limescale Removal</span>
+                    <span class="lt">Kalkių šalinimas vonioje</span>
                 </div>
             </div>
         </div>
@@ -133,26 +135,26 @@
 
     <footer class="dark-teal text-white py-16 px-4 text-center">
         <h1 class="text-4xl font-bold mb-6 uppercase tracking-widest">Core <span class="text-gold italic">Clean</span></h1>
-        <a href="https://wa.me/37064399422" class="text-3xl font-extrabold text-gold hover:opacity-80 transition">+370 643 99422</a>
-        <p class="mt-10 opacity-40 text-[10px] uppercase">© 2026 Core Clean Vilnius.</p>
+        <a href="https://wa.me/37064399422" class="text-3xl font-extrabold text-gold">+370 643 99422</a>
     </footer>
 
     <script>
         function setLanguage(lang) {
-            const enElems = document.querySelectorAll('.en');
-            const ltElems = document.querySelectorAll('.lt');
-            const btns = document.querySelectorAll('.lang-btn');
-            
+            const enElements = document.querySelectorAll('.en');
+            const ltElements = document.querySelectorAll('.lt');
+            const enBtn = document.getElementById('en-btn');
+            const ltBtn = document.getElementById('lt-btn');
+
             if (lang === 'lt') {
-                enElems.forEach(el => el.style.display = 'none');
-                ltElems.forEach(el => el.style.display = 'inline-block');
-                btns[2].classList.add('text-gold');
-                btns[0].classList.remove('text-gold');
+                enElements.forEach(el => el.style.display = 'none');
+                ltElements.forEach(el => el.style.display = 'inline');
+                ltBtn.classList.add('text-gold');
+                enBtn.classList.remove('text-gold');
             } else {
-                enElems.forEach(el => el.style.display = 'inline-block');
-                ltElems.forEach(el => el.style.display = 'none');
-                btns[0].classList.add('text-gold');
-                btns[2].classList.remove('text-gold');
+                enElements.forEach(el => el.style.display = 'inline');
+                ltElements.forEach(el => el.style.display = 'none');
+                enBtn.classList.add('text-gold');
+                ltBtn.classList.remove('text-gold');
             }
         }
     </script>
