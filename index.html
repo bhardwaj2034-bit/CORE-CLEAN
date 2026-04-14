@@ -89,18 +89,12 @@
 
     <section class="py-20 px-4 max-w-6xl mx-auto">
         <h3 class="text-center text-3xl font-bold uppercase mb-12"><span class="en">Our Work</span><span class="lt">Mūsų darbai</span></h3>
-        <div class="grid md:grid-cols-2 gap-12">
+        <div class="grid md:grid-cols-1 gap-12">
             
             <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-gold bg-white">
                 <div class="grid grid-cols-2">
-                    <div class="relative">
-                        <img src="https://i.postimg.cc/mg7Hdp7v/17e411d4-e804-47bd-9de3-fa2c0c04d1a0.jpg" class="w-full h-64 object-cover">
-                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold">BEFORE</span>
-                    </div>
-                    <div class="relative">
-                        <img src="https://i.postimg.cc/bJrdjmSK/ee82ec67-2d4d-4957-9fb7-1ed02d117fab.jpg" class="w-full h-64 object-cover border-l-2 border-gold">
-                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] px-2 py-1 font-bold">AFTER</span>
-                    </div>
+                    <img src="https://i.postimg.cc/mg7Hdp7v/17e411d4-e804-47bd-9de3-fa2c0c04d1a0.jpg" class="w-full h-auto object-cover" alt="Bathroom Before">
+                    <img src="https://i.postimg.cc/bJrdjmSK/ee82ec67-2d4d-4957-9fb7-1ed02d117fab.jpg" class="w-full h-auto object-cover border-l-2 border-gold" alt="Bathroom After">
                 </div>
                 <div class="p-4 text-center text-sm font-bold text-teal-900 bg-gray-50 uppercase tracking-widest">
                     <span class="en">Bathroom Restoration</span><span class="lt">Vonios atstatymas</span>
@@ -109,14 +103,8 @@
 
             <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-gold bg-white">
                 <div class="grid grid-cols-2">
-                    <div class="relative">
-                        <img src="https://i.postimg.cc/fbrSk4sb/02c602d9-d428-45b0-a982-22a9fcdf3bd8.jpg" class="w-full h-64 object-cover">
-                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold uppercase">Before</span>
-                    </div>
-                    <div class="relative">
-                        <img src="https://i.postimg.cc/BnhXwWXN/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-64 object-cover border-l-2 border-gold">
-                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] px-2 py-1 font-bold uppercase">After</span>
-                    </div>
+                    <img src="https://i.postimg.cc/fbrSk4sb/02c602d9-d428-45b0-a982-22a9fcdf3bd8.jpg" class="w-full h-auto object-cover" alt="Office Before">
+                    <img src="https://i.postimg.cc/BnhXwWXN/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-auto object-cover border-l-2 border-gold" alt="Office After">
                 </div>
                 <div class="p-4 text-center text-sm font-bold text-teal-900 bg-gray-50 uppercase tracking-widest">
                     <span class="en">Premium Office Clean</span><span class="lt">Biuro valymas</span>
@@ -137,27 +125,4 @@
     <footer class="bg-black text-white py-12 text-center">
         <h1 class="text-3xl font-bold mb-4 uppercase">Core <span class="text-gold italic">Clean</span></h1>
         <p class="mb-4 opacity-70"><span class="en">Quality service at an affordable price</span><span class="lt">Kokybiškos paslaugos už prieinamą kainą</span></p>
-        <a href="https://wa.me/37064399422" class="text-2xl font-bold text-gold">+370 643 99422</a>
-    </footer>
-
-    <script>
-        function setLanguage(lang) {
-            const en = document.querySelectorAll('.en');
-            const lt = document.querySelectorAll('.lt');
-            const enBtn = document.getElementById('en-btn');
-            const ltBtn = document.getElementById('lt-btn');
-            if (lang === 'lt') {
-                en.forEach(e => e.style.display = 'none');
-                lt.forEach(e => e.style.display = 'inline');
-                ltBtn.classList.add('text-gold', 'underline');
-                enBtn.classList.remove('text-gold', 'underline');
-            } else {
-                en.forEach(e => e.style.display = 'inline');
-                lt.forEach(e => e.style.display = 'none');
-                enBtn.classList.add('text-gold', 'underline');
-                ltBtn.classList.remove('text-gold', 'underline');
-            }
-        }
-    </script>
-</body>
-</html>
+        <a href="
