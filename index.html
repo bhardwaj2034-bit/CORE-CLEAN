@@ -14,9 +14,9 @@
         .lt { display: none; } 
     </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
+<body class="bg-gray-50 font-sans text-gray-900 leading-relaxed">
 
-    <div class="bg-black text-white px-6 py-2 flex justify-between items-center text-xs font-bold uppercase">
+    <div class="bg-black text-white px-6 py-2 flex justify-between items-center text-xs font-bold uppercase tracking-widest">
         <div>Vilnius, Lithuania</div>
         <div class="flex gap-4">
             <span id="en-btn" onclick="setLanguage('en')" class="lang-btn text-gold underline">EN</span>
@@ -88,31 +88,54 @@
     </section>
 
     <section class="py-20 px-4 max-w-6xl mx-auto">
-        <h3 class="text-center text-3xl font-bold uppercase mb-12"><span class="en">Before & After</span><span class="lt">Prieš ir Po</span></h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="rounded-xl overflow-hidden shadow-lg border-2 border-gold bg-white">
+        <h3 class="text-center text-3xl font-bold uppercase mb-12"><span class="en">Our Work</span><span class="lt">Mūsų darbai</span></h3>
+        <div class="grid md:grid-cols-2 gap-12">
+            
+            <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-gold bg-white">
                 <div class="grid grid-cols-2">
-                    <img src="https://via.placeholder.com/400x300?text=Before+Photo" class="w-full h-48 object-cover opacity-50">
-                    <img src="https://via.placeholder.com/400x300?text=After+Photo" class="w-full h-48 object-cover border-l-2 border-gold">
+                    <div class="relative">
+                        <img src="https://i.postimg.cc/vmD0xdJz/ea3ea0d6-2048-45c5-b39d-4cbff2649409.jpg" class="w-full h-64 object-cover">
+                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold">BEFORE</span>
+                    </div>
+                    <div class="relative">
+                        <img src="https://i.postimg.cc/qq7q4jhT/ad71fdac-4d88-4bcd-8101-537765af817c.jpg" class="w-full h-64 object-cover border-l-2 border-gold">
+                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] px-2 py-1 font-bold">AFTER</span>
+                    </div>
                 </div>
-                <div class="p-4 text-center text-sm font-bold text-teal-900">
-                    <span class="en">Professional Deep Clean Results</span>
-                    <span class="lt">Profesionalaus giluminio valymo rezultatai</span>
+                <div class="p-4 text-center text-sm font-bold text-teal-900 bg-gray-50">
+                    <span class="en">Bathroom Restoration</span><span class="lt">Vonios kambario atstatymas</span>
                 </div>
             </div>
+
+            <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-gray-200 bg-white opacity-80">
+                <div class="grid grid-cols-2">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x300?text=Upload+Before" class="w-full h-64 object-cover">
+                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold uppercase">Before</span>
+                    </div>
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x300?text=Upload+After" class="w-full h-64 object-cover border-l-2 border-gray-200">
+                        <span class="absolute top-2 left-2 bg-green-600 text-white text-[10px] px-2 py-1 font-bold uppercase">After</span>
+                    </div>
+                </div>
+                <div class="p-4 text-center text-sm font-bold text-gray-500 bg-gray-50">
+                    <span class="en">Office/Desk Cleaning</span><span class="lt">Biuro/Stalo valymas</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <section class="py-20 dark-teal text-white px-4">
         <h3 class="text-center text-3xl font-bold uppercase mb-12 text-gold"><span class="en">Reviews</span><span class="lt">Atsiliepimai</span></h3>
         <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-            <div class="bg-white/10 p-6 rounded-lg italic">"Excellent work and very reliable service!" - Saulius</div>
-            <div class="bg-white/10 p-6 rounded-lg italic">"Geriausia kokybė už tokią kainą Vilniuje." - Kristina</div>
+            <div class="bg-white/10 p-6 rounded-lg italic">"Excellent work and very reliable service! My home looks brand new." - Saulius</div>
+            <div class="bg-white/10 p-6 rounded-lg italic">"Geriausia kokybė už tokią kainą Vilniuje. Rekomenduoju visiems." - Kristina</div>
         </div>
     </section>
 
     <footer class="bg-black text-white py-12 text-center">
-        <h1 class="text-3xl font-bold mb-4">Core <span class="text-gold italic">Clean</span></h1>
+        <h1 class="text-3xl font-bold mb-4 uppercase">Core <span class="text-gold italic">Clean</span></h1>
         <p class="mb-4 opacity-70"><span class="en">Quality service at an affordable price</span><span class="lt">Kokybiškos paslaugos už prieinamą kainą</span></p>
         <a href="https://wa.me/37064399422" class="text-2xl font-bold text-gold">+370 643 99422</a>
     </footer>
