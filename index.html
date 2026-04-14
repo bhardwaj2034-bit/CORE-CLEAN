@@ -125,4 +125,27 @@
     <footer class="bg-black text-white py-12 text-center">
         <h1 class="text-3xl font-bold mb-4 uppercase">Core <span class="text-gold italic">Clean</span></h1>
         <p class="mb-4 opacity-70"><span class="en">Quality service at an affordable price</span><span class="lt">Kokybiškos paslaugos už prieinamą kainą</span></p>
-        <a href="
+        <a href="https://wa.me/37064399422" class="text-2xl font-bold text-gold">+370 643 99422</a>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const en = document.querySelectorAll('.en');
+            const lt = document.querySelectorAll('.lt');
+            const enBtn = document.getElementById('en-btn');
+            const ltBtn = document.getElementById('lt-btn');
+            if (lang === 'lt') {
+                en.forEach(e => e.style.display = 'none');
+                lt.forEach(e => e.style.display = 'inline');
+                ltBtn.classList.add('text-gold', 'underline');
+                enBtn.classList.remove('text-gold', 'underline');
+            } else {
+                en.forEach(e => e.style.display = 'inline');
+                lt.forEach(e => e.style.display = 'none');
+                enBtn.classList.add('text-gold', 'underline');
+                ltBtn.classList.remove('text-gold', 'underline');
+            }
+        }
+    </script>
+</body>
+</html>
