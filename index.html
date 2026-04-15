@@ -7,9 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
         
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Poppins', sans-serif; }
         .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f9e29c 100%); }
         .dark-teal { background-color: #0d3b3f; }
         .text-gold { color: #d4af37; }
@@ -36,6 +36,13 @@
             backdrop-filter: blur(12px);
             background-color: rgba(13, 59, 63, 0.9);
         }
+
+        /* STYLISH TEXT CLASSES */
+        .title-display { font-weight: 900; letter-spacing: -0.05em; text-transform: uppercase; }
+        .title-subline { font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+        .attractive-header { font-weight: 900; letter-spacing: -0.05em; text-transform: uppercase; border-l-8 border-gold pl-6 }
+        .premium-text { color: #666; font-weight: 400; }
+        .contact-btn { font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; text-shadow: 0 1px 1px rgba(0,0,0,0.2); }
     </style>
 </head>
 <body class="bg-[#fafafa] text-gray-900 leading-relaxed">
@@ -54,61 +61,61 @@
             <img src="https://i.postimg.cc/SNrph9CJ/1776267111494.png" alt="Core Clean Logo" class="company-logo">
         </div>
         <div class="mr-6">
-            <a href="https://wa.me/37063818400" class="gold-gradient text-black px-10 py-3 rounded-full font-black text-xs tracking-widest shadow-[0_10px_20px_rgba(212,175,55,0.3)] hover:brightness-110 transition-all">
+            <a href="https://wa.me/37063818400" class="gold-gradient text-black px-10 py-3 rounded-full shadow-[0_10px_20px_rgba(212,175,55,0.3)] hover:brightness-110 transition-all contact-btn text-xs">
                 <span class="en">CONTACT US</span><span class="lt">KONTAKTAI</span>
             </a>
         </div>
     </nav>
 
     <header class="py-20 bg-white text-center border-b">
-        <h2 class="text-5xl font-black uppercase tracking-tighter text-[#0d3b3f]">
-            <span class="en">Quality Service at <br><span class="text-gold italic">Affordable Prices</span></span>
-            <span class="lt">Kokybiškos paslaugos <br><span class="text-gold italic">už prieinamą kainą</span></span>
+        <h2 class="text-5xl title-display text-[#0d3b3f]">
+            <span class="en">Quality Service at <br><span class="gold-gradient text-transparent bg-clip-text italic">Affordable Prices</span></span>
+            <span class="lt">Kokybiškos paslaugos <br><span class="gold-gradient text-transparent bg-clip-text italic">už prieinamą kainą</span></span>
         </h2>
     </header>
 
     <section class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="flex items-center gap-4 mb-12">
+        <div class="flex items-center gap-4 mb-12 px-6">
             <div class="h-1 w-20 gold-gradient"></div>
-            <h3 class="text-2xl font-black text-teal-900 uppercase tracking-widest">
+            <h3 class="text-2xl title-display text-teal-900 tracking-wider">
                 <span class="en">General Clean (Single Visit)</span><span class="lt">Paprastas valymas (Vienkartinis)</span>
             </h3>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-8 px-6">
             <div class="premium-card bg-white p-8 rounded-3xl shadow-sm text-center">
-                <h4 class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-2">Studio / 1 Room</h4>
-                <div class="text-4xl font-black text-teal-900">€50</div>
+                <h4 class="title-subline text-gray-500 text-xs mb-2">Studio / 1 Room</h4>
+                <div class="text-4xl title-display text-teal-900">€50</div>
             </div>
             <div class="premium-card bg-white p-8 rounded-3xl shadow-sm text-center border-t-4 border-gold">
-                <h4 class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-2">2 Room Apartment</h4>
-                <div class="text-4xl font-black text-teal-900">€60</div>
+                <h4 class="title-subline text-gray-500 text-xs mb-2">2 Room Apartment</h4>
+                <div class="text-4xl title-display text-teal-900">€60</div>
             </div>
             <div class="premium-card bg-white p-8 rounded-3xl shadow-sm text-center">
-                <h4 class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-2">3 Room Apartment</h4>
-                <div class="text-4xl font-black text-teal-900">€70</div>
+                <h4 class="title-subline text-gray-500 text-xs mb-2">3 Room Apartment</h4>
+                <div class="text-4xl title-display text-teal-900">€70</div>
             </div>
         </div>
     </section>
 
     <section class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="flex items-center gap-4 mb-12">
+        <div class="flex items-center gap-4 mb-12 px-6">
             <div class="h-1 w-20 gold-gradient"></div>
-            <h3 class="text-2xl font-black text-teal-900 uppercase tracking-widest">
+            <h3 class="text-2xl title-display text-teal-900 tracking-wider">
                 <span class="en">Deep Restoration (Single Visit)</span><span class="lt">Giluminis valymas (Vienkartinis)</span>
             </h3>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="premium-card bg-white p-8 rounded-3xl shadow-sm text-center">
-                <h4 class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-2">1 Room Apartment</h4>
-                <div class="text-4xl font-black text-teal-900">€120</div>
-            </div>
-            <div class="premium-card bg-white p-8 rounded-3xl shadow-sm text-center border-t-4 border-teal-900">
-                <h4 class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-2">2 Room Apartment</h4>
-                <div class="text-4xl font-black text-teal-900">€150</div>
+        <div class="grid md:grid-cols-3 gap-8 px-6">
+            <div class="premium-card bg-white p-8 rounded-3xl shadow-sm text-center border-t-4 border-gold">
+                <h4 class="title-subline text-gray-500 text-xs mb-2">Studio / 1 Room</h4>
+                <div class="text-4xl title-display text-teal-900">€120</div>
             </div>
             <div class="premium-card bg-white p-8 rounded-3xl shadow-sm text-center">
-                <h4 class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-2">3 Room Apartment</h4>
-                <div class="text-4xl font-black text-teal-900">€180</div>
+                <h4 class="title-subline text-gray-500 text-xs mb-2">2 Room Apartment</h4>
+                <div class="text-4xl title-display text-teal-900">€150</div>
+            </div>
+            <div class="premium-card bg-white p-8 rounded-3xl shadow-sm text-center border-t-4 border-gold">
+                <h4 class="title-subline text-gray-500 text-xs mb-2">3 Room Apartment</h4>
+                <div class="text-4xl title-display text-teal-900">€180</div>
             </div>
         </div>
     </section>
@@ -116,16 +123,16 @@
     <section class="py-16 px-6 max-w-7xl mx-auto bg-gray-100 rounded-[3rem] border border-gray-200">
         <div class="flex items-center gap-4 mb-12 px-6">
             <div class="h-1 w-20 gold-gradient"></div>
-            <h3 class="text-2xl font-black text-teal-900 uppercase tracking-widest">
+            <h3 class="text-2xl title-display text-teal-900 tracking-wider">
                 <span class="en">Subscription Model (4 Times/Month)</span><span class="lt">Prenumerata (4 kartai/mėn)</span>
             </h3>
         </div>
         <div class="grid lg:grid-cols-3 gap-8 px-6">
             <div class="premium-card bg-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
                 <div class="gold-gradient h-2 w-full absolute top-0 left-0"></div>
-                <h4 class="font-black text-xl mb-1 uppercase">1 Room Apartment</h4>
-                <div class="text-3xl font-black text-gold mb-6">€240<span class="text-sm text-gray-400">/mo</span></div>
-                <ul class="text-sm space-y-4 text-gray-600 mb-8">
+                <h4 class="title-display text-xl mb-1 uppercase">Studio / 1 Room</h4>
+                <div class="text-3xl title-display gold-gradient text-transparent bg-clip-text mb-6">€240<span class="text-sm opacity-50">/mo</span></div>
+                <ul class="text-sm space-y-4 premium-text mb-8">
                     <li><i class="fas fa-check text-gold mr-2"></i> Incl. 3 General + 1 Deep Clean</li>
                     <li><i class="fas fa-check text-gold mr-2"></i> Guaranteed weekly slot</li>
                     <li><i class="fas fa-check text-gold mr-2"></i> Assigned pro clean team</li>
@@ -133,8 +140,8 @@
             </div>
             <div class="premium-card dark-teal p-8 rounded-3xl shadow-xl relative overflow-hidden text-white">
                 <div class="gold-gradient h-2 w-full absolute top-0 left-0"></div>
-                <h4 class="font-black text-xl mb-1 uppercase">2 Room Apartment</h4>
-                <div class="text-3xl font-black text-gold mb-6">€260<span class="text-sm opacity-50">/mo</span></div>
+                <h4 class="title-display text-xl mb-1 uppercase">2 Rooms</h4>
+                <div class="text-3xl title-display text-gold mb-6">€260<span class="text-sm opacity-50">/mo</span></div>
                 <ul class="text-sm space-y-4 opacity-90 mb-8">
                     <li><i class="fas fa-check text-gold mr-2"></i> Incl. 3 General + 1 Deep Clean</li>
                     <li><i class="fas fa-check text-gold mr-2"></i> Guaranteed weekly slot</li>
@@ -143,9 +150,9 @@
             </div>
             <div class="premium-card bg-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
                 <div class="gold-gradient h-2 w-full absolute top-0 left-0"></div>
-                <h4 class="font-black text-xl mb-1 uppercase">3 Room Apartment</h4>
-                <div class="text-3xl font-black text-gold mb-6">€280<span class="text-sm text-gray-400">/mo</span></div>
-                <ul class="text-sm space-y-4 text-gray-600 mb-8">
+                <h4 class="title-display text-xl mb-1 uppercase">3 Rooms</h4>
+                <div class="text-3xl title-display gold-gradient text-transparent bg-clip-text mb-6">€280<span class="text-sm opacity-50">/mo</span></div>
+                <ul class="text-sm space-y-4 premium-text mb-8">
                     <li><i class="fas fa-check text-gold mr-2"></i> Incl. 3 General + 1 Deep Clean</li>
                     <li><i class="fas fa-check text-gold mr-2"></i> Guaranteed weekly slot</li>
                     <li><i class="fas fa-check text-gold mr-2"></i> Assigned pro clean team</li>
@@ -155,22 +162,24 @@
     </section>
 
     <section class="py-24 px-6 max-w-7xl mx-auto">
-        <h3 class="text-center text-4xl font-black uppercase mb-16 tracking-widest text-teal-900">
-            <span class="en">Transformation Results</span><span class="lt">Mūsų Rezultatai</span>
+        <h3 class="text-center text-5xl attractive-header text-teal-900 mb-16 px-10">
+            <span class="en">Our <span class="gold-gradient text-transparent bg-clip-text italic">Transformation</span> Results</span>
+            <span class="lt">Mūsų <span class="gold-gradient text-transparent bg-clip-text italic">Rezultatai</span></span>
         </h3>
-        <div class="grid md:grid-cols-2 gap-12">
+        <div class="grid md:grid-cols-2 gap-12 px-6">
+            
             <div class="premium-card rounded-3xl overflow-hidden shadow-2xl bg-white">
                 <div class="grid grid-cols-2">
                     <div class="relative">
-                        <img src="https://i.postimg.cc/26x0Zk0z/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-80 object-cover">
-                        <span class="absolute bottom-4 left-4 bg-black/80 text-white text-[10px] px-3 py-1 font-bold rounded">BEFORE</span>
+                        <img src="https://i.postimg.cc/85FCFcpN/17e411d4-e804-47bd-9de3-fa2c0c04d1a0.jpg" class="w-full h-80 object-cover">
+                        <span class="absolute top-4 left-4 bg-black/80 text-white text-[10px] px-3 py-1 title-display rounded">BEFORE</span>
                     </div>
                     <div class="relative">
-                        <img src="https://i.postimg.cc/NfxQjm6N/ee82ec67-2d4d-4957-9fb7-1ed02d117fab.jpg" class="w-full h-80 object-cover border-l-2 border-white">
-                        <span class="absolute bottom-4 left-4 bg-gold text-black text-[10px] px-3 py-1 font-bold rounded">AFTER</span>
+                        <img src="https://i.postimg.cc/bJrdjmSK/ee82ec67-2d4d-4957-9fb7-1ed02d117fab.jpg" class="w-full h-80 object-cover border-l-2 border-white">
+                        <span class="absolute top-4 left-4 bg-gold text-black text-[10px] px-3 py-1 title-display rounded shadow">AFTER</span>
                     </div>
                 </div>
-                <div class="p-6 text-center font-black uppercase tracking-widest text-teal-950 bg-gray-50">
+                <div class="p-6 text-center Attractive-Header text-teal-950 bg-gray-50 border-t border-gold pl-0">
                     <span class="en">Bathroom Restoration</span><span class="lt">Vonios Atstatymas</span>
                 </div>
             </div>
@@ -178,16 +187,16 @@
             <div class="premium-card rounded-3xl overflow-hidden shadow-2xl bg-white">
                 <div class="grid grid-cols-2">
                     <div class="relative">
-                        <img src="https://i.postimg.cc/s2GF7hW2/02c602d9-d428-45b0-a982-22a9fcdf3bd8.jpg" class="w-full h-80 object-cover">
-                        <span class="absolute bottom-4 left-4 bg-black/80 text-white text-[10px] px-3 py-1 font-bold rounded">BEFORE</span>
+                        <img src="https://i.postimg.cc/fbrSk4sb/02c602d9-d428-45b0-a982-22a9fcdf3bd8.jpg" class="w-full h-80 object-cover">
+                        <span class="absolute top-4 left-4 bg-black/80 text-white text-[10px] px-3 py-1 title-display rounded">BEFORE</span>
                     </div>
                     <div class="relative">
-                        <img src="https://i.postimg.cc/26x0Zk0z/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-80 object-cover border-l-2 border-white">
-                        <span class="absolute bottom-4 left-4 bg-gold text-black text-[10px] px-3 py-1 font-bold rounded">AFTER</span>
+                        <img src="https://i.postimg.cc/BnhXwWXN/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-80 object-cover border-l-2 border-white">
+                        <span class="absolute top-4 left-4 bg-gold text-black text-[10px] px-3 py-1 title-display rounded shadow">AFTER</span>
                     </div>
                 </div>
-                <div class="p-6 text-center font-black uppercase tracking-widest text-teal-950 bg-gray-50">
-                    <span class="en">Office Deep Clean</span><span class="lt">Biuro Valymas</span>
+                <div class="p-6 text-center Attractive-Header text-teal-950 bg-gray-50 border-t border-gold pl-0">
+                    <span class="en">Premium Office Clean</span><span class="lt">Biuro Valymas</span>
                 </div>
             </div>
         </div>
@@ -195,8 +204,8 @@
 
     <footer class="bg-black text-white py-20 text-center">
         <img src="https://i.postimg.cc/SNrph9CJ/1776267111494.png" alt="Core Clean" class="h-24 mx-auto mb-8 opacity-80">
-        <a href="tel:+37063818400" class="text-3xl font-black text-gold">+370 638 18400</a>
-        <p class="mt-4 text-gray-500 uppercase text-[10px] tracking-[0.4em]">Vilnius • Professional • Reliable</p>
+        <a href="tel:+37063818400" class="text-3xl title-display gold-gradient text-transparent bg-clip-text hover:tracking-wider transition-all duration-500">+370 638 18400</a>
+        <p class="mt-4 title-subline text-gray-700 uppercase text-[10px] tracking-[0.4em]">Vilnius • Professional • Reliable</p>
     </footer>
 
     <script>
