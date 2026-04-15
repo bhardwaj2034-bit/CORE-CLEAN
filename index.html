@@ -12,11 +12,28 @@
         .text-gold { color: #d4af37; }
         .lang-btn { cursor: pointer; transition: 0.3s; }
         .lt { display: none; } 
-        /* Logo styling for perfect fit */
+        
+        /* Styled larger logo */
         .company-logo {
-            height: 60px; /* Adjust height as needed */
+            height: 100px; /* Increased size significantly */
             width: auto;
             object-fit: contain;
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.3)); /* Makes logo pop */
+        }
+
+        /* Stylish Card Hover Effects */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Glassmorphism effect for Nav */
+        nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(13, 59, 63, 0.95);
         }
     </style>
 </head>
@@ -31,123 +48,157 @@
         </div>
     </div>
 
-    <nav class="dark-teal p-3 text-white flex justify-between items-center sticky top-0 z-50 shadow-xl">
-        <div class="flex items-center gap-2">
+    <nav class="p-4 text-white flex justify-between items-center sticky top-0 z-50 shadow-2xl border-b border-gold/20">
+        <div class="flex items-center">
             <img src="https://i.postimg.cc/13f3tM9m/1000067391-removebg-preview-Nero-AI-Image-Upscaler-Photo-Face.png" alt="Core Clean Logo" class="company-logo">
         </div>
-        <a href="https://wa.me/37064399422" class="gold-gradient text-black px-6 py-2 rounded-full font-bold text-sm">
+        <a href="https://wa.me/37064399422" class="gold-gradient text-black px-8 py-3 rounded-full font-bold text-sm shadow-lg hover:scale-105 transition-transform">
             <span class="en">CONTACT US</span><span class="lt">SUSISIEKITE</span>
         </a>
     </nav>
 
-    <header class="py-16 bg-white text-center border-b">
-        <h2 class="text-4xl font-extrabold uppercase tracking-tighter text-teal-900">
+    <header class="py-20 bg-white text-center border-b relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+            <i class="fas fa-broom text-9xl absolute -left-10 top-10 rotate-12"></i>
+            <i class="fas fa-sparkles text-9xl absolute -right-10 bottom-10 -rotate-12"></i>
+        </div>
+        <h2 class="text-5xl font-extrabold uppercase tracking-tighter text-teal-900 relative z-10">
             <span class="en">Quality Service at <br><span class="text-gold">Affordable Prices</span></span>
             <span class="lt">Kokybiškos paslaugos <br><span class="text-gold">už prieinamą kainą</span></span>
         </h2>
     </header>
 
-    <section class="py-12 px-4 max-w-6xl mx-auto">
-        <h3 class="text-2xl font-bold text-teal-900 mb-8 uppercase border-l-8 border-teal-900 pl-4">
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold text-teal-900 mb-10 uppercase border-l-8 border-teal-900 pl-6">
             <span class="en">1. General Cleaning</span><span class="lt">1. Paprastas valymas</span>
         </h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-md border">
-                <h4 class="font-bold text-gold uppercase mb-4"><span class="en">Single Visit</span><span class="lt">Vienkartinis</span></h4>
-                <div class="space-y-3">
-                    <div class="flex justify-between border-b pb-2"><span>1 Room</span><b>€50</b></div>
-                    <div class="flex justify-between border-b pb-2"><span>2 Rooms</span><b>€60</b></div>
-                    <div class="flex justify-between"><span>3 Rooms</span><b>€70</b></div>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="service-card bg-white p-8 rounded-2xl shadow-md border border-gray-100">
+                <h4 class="font-bold text-gold uppercase mb-6 flex items-center gap-2">
+                    <i class="fas fa-calendar-check"></i>
+                    <span class="en">Single Visit</span><span class="lt">Vienkartinis</span>
+                </h4>
+                <div class="space-y-4">
+                    <div class="flex justify-between border-b pb-3"><span>1 Room</span><b class="text-xl text-teal-900">€50</b></div>
+                    <div class="flex justify-between border-b pb-3"><span>2 Rooms</span><b class="text-xl text-teal-900">€60</b></div>
+                    <div class="flex justify-between"><span>3 Rooms</span><b class="text-xl text-teal-900">€70</b></div>
                 </div>
             </div>
-            <div class="bg-teal-50 p-6 rounded-xl shadow-md border border-teal-200">
-                <h4 class="font-bold text-teal-900 uppercase mb-4"><span class="en">Weekly Subscription</span><span class="lt">Mėnesio prenumerata</span></h4>
-                <div class="space-y-3">
-                    <div class="flex justify-between border-b pb-2"><span>1 Room</span><b>€160/mo</b></div>
-                    <div class="flex justify-between border-b pb-2"><span>2 Rooms</span><b>€180/mo</b></div>
-                    <div class="flex justify-between"><span>3 Rooms</span><b>€200/mo</b></div>
+            <div class="service-card bg-teal-50 p-8 rounded-2xl shadow-md border border-teal-100">
+                <h4 class="font-bold text-teal-900 uppercase mb-6 flex items-center gap-2">
+                    <i class="fas fa-redo"></i>
+                    <span class="en">Weekly Subscription</span><span class="lt">Mėnesio prenumerata</span>
+                </h4>
+                <div class="space-y-4">
+                    <div class="flex justify-between border-b border-teal-200 pb-3"><span>1 Room</span><b class="text-xl text-teal-900">€160/mo</b></div>
+                    <div class="flex justify-between border-b border-teal-200 pb-3"><span>2 Rooms</span><b class="text-xl text-teal-900">€180/mo</b></div>
+                    <div class="flex justify-between"><span>3 Rooms</span><b class="text-xl text-teal-900">€200/mo</b></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-12 px-4 max-w-6xl mx-auto bg-gray-100 rounded-3xl">
-        <h3 class="text-2xl font-bold text-teal-900 mb-8 uppercase border-l-8 border-gold pl-4">
+    <section class="py-16 px-4 max-w-6xl mx-auto bg-gray-100/50 rounded-[3rem] my-10 border border-gray-200">
+        <h3 class="text-3xl font-bold text-teal-900 mb-10 uppercase border-l-8 border-gold pl-6">
             <span class="en">2. Deep Restoration</span><span class="lt">2. Giluminis valymas</span>
         </h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-md border">
-                <h4 class="font-bold text-gold uppercase mb-4"><span class="en">Single Visit</span><span class="lt">Vienkartinis</span></h4>
-                <div class="space-y-3">
-                    <div class="flex justify-between border-b pb-2"><span>1 Room</span><b>€120</b></div>
-                    <div class="flex justify-between border-b pb-2"><span>2 Rooms</span><b>€150</b></div>
-                    <div class="flex justify-between"><span>3 Rooms</span><b>€180</b></div>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="service-card bg-white p-8 rounded-2xl shadow-md border border-gray-100">
+                <h4 class="font-bold text-gold uppercase mb-6 flex items-center gap-2">
+                    <i class="fas fa-magic"></i>
+                    <span class="en">Single Visit</span><span class="lt">Vienkartinis</span>
+                </h4>
+                <div class="space-y-4">
+                    <div class="flex justify-between border-b pb-3"><span>1 Room</span><b class="text-xl text-teal-900">€120</b></div>
+                    <div class="flex justify-between border-b pb-3"><span>2 Rooms</span><b class="text-xl text-teal-900">€150</b></div>
+                    <div class="flex justify-between"><span>3 Rooms</span><b class="text-xl text-teal-900">€180</b></div>
                 </div>
             </div>
-            <div class="gold-gradient p-6 rounded-xl shadow-md border border-gold">
-                <h4 class="font-bold text-black uppercase mb-4"><span class="en">Elite Combo Subscription</span><span class="lt">Elite Komplektas</span></h4>
-                <div class="space-y-3 text-black">
-                    <div class="flex justify-between border-b border-black/10 pb-2"><span>1 Room</span><b>€240/mo</b></div>
-                    <div class="flex justify-between border-b border-black/10 pb-2"><span>2 Rooms</span><b>€260/mo</b></div>
-                    <div class="flex justify-between"><span>3 Rooms</span><b>€280/mo</b></div>
+            <div class="service-card gold-gradient p-8 rounded-2xl shadow-xl border border-gold/30">
+                <h4 class="font-bold text-black uppercase mb-6 flex items-center gap-2">
+                    <i class="fas fa-crown"></i>
+                    <span class="en">Elite Combo Subscription</span><span class="lt">Elite Komplektas</span>
+                </h4>
+                <div class="space-y-4 text-black">
+                    <div class="flex justify-between border-b border-black/10 pb-3"><span>1 Room</span><b class="text-xl">€240/mo</b></div>
+                    <div class="flex justify-between border-b border-black/10 pb-3"><span>2 Rooms</span><b class="text-xl">€260/mo</b></div>
+                    <div class="flex justify-between"><span>3 Rooms</span><b class="text-xl">€280/mo</b></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-4 max-w-6xl mx-auto">
-        <h3 class="text-center text-3xl font-bold uppercase mb-12"><span class="en">Our Results</span><span class="lt">Mūsų rezultatai</span></h3>
-        <div class="grid md:grid-cols-2 gap-12">
+    <section class="py-24 px-4 max-w-6xl mx-auto">
+        <h3 class="text-center text-4xl font-black uppercase mb-16 tracking-widest text-teal-900">
+            <span class="en">Our Transformation Results</span><span class="lt">Mūsų darbai</span>
+        </h3>
+        <div class="grid md:grid-cols-2 gap-16">
             
-            <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-gold bg-white">
+            <div class="service-card rounded-3xl overflow-hidden shadow-2xl border-2 border-gold/30 bg-white">
                 <div class="grid grid-cols-2">
                     <div class="relative">
-                        <img src="https://i.postimg.cc/26x0Zk0z/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-64 object-cover">
-                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold uppercase">Before</span>
+                        <img src="https://i.postimg.cc/26x0Zk0z/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-80 object-cover">
+                        <span class="absolute bottom-4 left-4 bg-black/80 backdrop-blur-sm text-white text-xs px-3 py-1.5 font-bold rounded-lg">BEFORE</span>
                     </div>
                     <div class="relative">
-                        <img src="https://i.postimg.cc/NfxQjm6N/ee82ec67-2d4d-4957-9fb7-1ed02d117fab.jpg" class="w-full h-64 object-cover border-l-2 border-gold">
-                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] px-2 py-1 font-bold uppercase">After</span>
+                        <img src="https://i.postimg.cc/NfxQjm6N/ee82ec67-2d4d-4957-9fb7-1ed02d117fab.jpg" class="w-full h-80 object-cover border-l-4 border-white/20">
+                        <span class="absolute bottom-4 left-4 bg-gold text-black text-xs px-3 py-1.5 font-bold rounded-lg shadow-lg">AFTER</span>
                     </div>
                 </div>
-                <div class="p-4 text-center text-sm font-bold text-teal-900 bg-gray-50 uppercase tracking-widest">
+                <div class="p-6 text-center text-lg font-bold text-teal-900 bg-gray-50 border-t border-gray-100">
                     <span class="en">Bathroom Restoration</span><span class="lt">Vonios atstatymas</span>
                 </div>
             </div>
 
-            <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-gold bg-white">
+            <div class="service-card rounded-3xl overflow-hidden shadow-2xl border-2 border-gold/30 bg-white">
                 <div class="grid grid-cols-2">
                     <div class="relative">
-                        <img src="https://i.postimg.cc/s2GF7hW2/02c602d9-d428-45b0-a982-22a9fcdf3bd8.jpg" class="w-full h-64 object-cover">
-                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold uppercase">Before</span>
+                        <img src="https://i.postimg.cc/s2GF7hW2/02c602d9-d428-45b0-a982-22a9fcdf3bd8.jpg" class="w-full h-80 object-cover">
+                        <span class="absolute bottom-4 left-4 bg-black/80 backdrop-blur-sm text-white text-xs px-3 py-1.5 font-bold rounded-lg">BEFORE</span>
                     </div>
                     <div class="relative">
-                        <img src="https://i.postimg.cc/26x0Zk0z/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-64 object-cover border-l-2 border-gold">
-                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] px-2 py-1 font-bold uppercase">After</span>
+                        <img src="https://i.postimg.cc/26x0Zk0z/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-80 object-cover border-l-4 border-white/20">
+                        <span class="absolute bottom-4 left-4 bg-gold text-black text-xs px-3 py-1.5 font-bold rounded-lg shadow-lg">AFTER</span>
                     </div>
                 </div>
-                <div class="p-4 text-center text-sm font-bold text-teal-900 bg-gray-50 uppercase tracking-widest">
-                    <span class="en">Office Deep Clean</span><span class="lt">Biuro valymas</span>
+                <div class="p-6 text-center text-lg font-bold text-teal-900 bg-gray-50 border-t border-gray-100">
+                    <span class="en">Premium Office Clean</span><span class="lt">Biuro valymas</span>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section class="py-20 dark-teal text-white px-4">
-        <h3 class="text-center text-3xl font-bold uppercase mb-12 text-gold"><span class="en">Reviews</span><span class="lt">Atsiliepimai</span></h3>
-        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-            <div class="bg-white/10 p-6 rounded-lg italic">"Excellent work and very reliable service! My home looks brand new." - Saulius</div>
-            <div class="bg-white/10 p-6 rounded-lg italic">"Geriausia kokybė už tokią kainą Vilniuje. Rekomenduoju visiems." - Kristina</div>
+    <section class="py-24 dark-teal text-white px-4 relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 opacity-10">
+            <i class="fas fa-quote-right text-[15rem]"></i>
+        </div>
+        <h3 class="text-center text-4xl font-bold uppercase mb-16 text-gold relative z-10"><span class="en">Client Reviews</span><span class="lt">Atsiliepimai</span></h3>
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 relative z-10">
+            <div class="bg-white/5 p-10 rounded-3xl backdrop-blur-sm border border-white/10 italic text-lg leading-relaxed shadow-xl">
+                "Excellent work and very reliable service! My home looks brand new. The team is professional and meticulous." <br><br>
+                <span class="not-italic font-bold text-gold">— Saulius</span>
+            </div>
+            <div class="bg-white/5 p-10 rounded-3xl backdrop-blur-sm border border-white/10 italic text-lg leading-relaxed shadow-xl">
+                "Geriausia kokybė už tokią kainą Vilniuje. Rekomenduoju visiems, kam reikia tikro švaros standarto." <br><br>
+                <span class="not-italic font-bold text-gold">— Kristina</span>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-black text-white py-12 text-center">
-        <div class="flex justify-center mb-4">
-             <img src="https://i.postimg.cc/13f3tM9m/1000067391-removebg-preview-Nero-AI-Image-Upscaler-Photo-Face.png" alt="Core Clean Logo" class="company-logo">
+    <footer class="bg-black text-white py-20 text-center border-t border-gold/20">
+        <div class="flex justify-center mb-8">
+             <img src="https://i.postimg.cc/13f3tM9m/1000067391-removebg-preview-Nero-AI-Image-Upscaler-Photo-Face.png" alt="Core Clean Logo" class="company-logo h-24">
         </div>
-        <p class="mb-4 opacity-70"><span class="en">Quality service at an affordable price</span><span class="lt">Kokybiškos paslaugos už prieinamą kainą</span></p>
-        <a href="https://wa.me/37064399422" class="text-2xl font-bold text-gold">+370 643 99422</a>
+        <p class="mb-8 opacity-60 text-lg max-w-md mx-auto"><span class="en">The highest standard of cleanliness in Vilnius. Professional and reliable.</span><span class="lt">Aukščiausias švaros standartas Vilniuje. Profesionalu ir patikima.</span></p>
+        <div class="flex flex-col gap-4">
+            <a href="tel:+37064399422" class="text-3xl font-bold text-gold hover:scale-105 transition-transform">+370 643 99422</a>
+            <div class="flex justify-center gap-6 mt-4 opacity-50 text-xl">
+                <i class="fab fa-whatsapp cursor-pointer hover:text-gold"></i>
+                <i class="fab fa-viber cursor-pointer hover:text-gold"></i>
+                <i class="fab fa-facebook cursor-pointer hover:text-gold"></i>
+            </div>
+        </div>
     </footer>
 
     <script>
