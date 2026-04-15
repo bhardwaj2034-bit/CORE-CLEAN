@@ -12,6 +12,12 @@
         .text-gold { color: #d4af37; }
         .lang-btn { cursor: pointer; transition: 0.3s; }
         .lt { display: none; } 
+        /* Logo styling for perfect fit */
+        .company-logo {
+            height: 60px; /* Adjust height as needed */
+            width: auto;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900 leading-relaxed">
@@ -25,8 +31,10 @@
         </div>
     </div>
 
-    <nav class="dark-teal p-5 text-white flex justify-between items-center sticky top-0 z-50 shadow-xl">
-        <h1 class="text-2xl font-bold uppercase italic">Core <span class="text-gold uppercase not-italic">Clean</span></h1>
+    <nav class="dark-teal p-3 text-white flex justify-between items-center sticky top-0 z-50 shadow-xl">
+        <div class="flex items-center gap-2">
+            <img src="https://i.postimg.cc/13f3tM9m/1000067391-removebg-preview-Nero-AI-Image-Upscaler-Photo-Face.png" alt="Core Clean Logo" class="company-logo">
+        </div>
         <a href="https://wa.me/37064399422" class="gold-gradient text-black px-6 py-2 rounded-full font-bold text-sm">
             <span class="en">CONTACT US</span><span class="lt">SUSISIEKITE</span>
         </a>
@@ -88,18 +96,18 @@
     </section>
 
     <section class="py-20 px-4 max-w-6xl mx-auto">
-        <h3 class="text-center text-3xl font-bold uppercase mb-12"><span class="en">Our Work</span><span class="lt">Mūsų darbai</span></h3>
+        <h3 class="text-center text-3xl font-bold uppercase mb-12"><span class="en">Our Results</span><span class="lt">Mūsų rezultatai</span></h3>
         <div class="grid md:grid-cols-2 gap-12">
             
             <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-gold bg-white">
                 <div class="grid grid-cols-2">
                     <div class="relative">
-                        <img src="https://i.postimg.cc/mg7Hdp7v/17e411d4-e804-47bd-9de3-fa2c0c04d1a0.jpg" class="w-full h-64 object-cover">
-                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold">BEFORE</span>
+                        <img src="https://i.postimg.cc/26x0Zk0z/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-64 object-cover">
+                        <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold uppercase">Before</span>
                     </div>
                     <div class="relative">
-                        <img src="https://i.postimg.cc/bJrdjmSK/ee82ec67-2d4d-4957-9fb7-1ed02d117fab.jpg" class="w-full h-64 object-cover border-l-2 border-gold">
-                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] px-2 py-1 font-bold">AFTER</span>
+                        <img src="https://i.postimg.cc/NfxQjm6N/ee82ec67-2d4d-4957-9fb7-1ed02d117fab.jpg" class="w-full h-64 object-cover border-l-2 border-gold">
+                        <span class="absolute top-2 left-2 bg-gold text-black text-[10px] px-2 py-1 font-bold uppercase">After</span>
                     </div>
                 </div>
                 <div class="p-4 text-center text-sm font-bold text-teal-900 bg-gray-50 uppercase tracking-widest">
@@ -110,11 +118,11 @@
             <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-gold bg-white">
                 <div class="grid grid-cols-2">
                     <div class="relative">
-                        <img src="https://i.postimg.cc/fbrSk4sb/02c602d9-d428-45b0-a982-22a9fcdf3bd8.jpg" class="w-full h-64 object-cover">
+                        <img src="https://i.postimg.cc/s2GF7hW2/02c602d9-d428-45b0-a982-22a9fcdf3bd8.jpg" class="w-full h-64 object-cover">
                         <span class="absolute top-2 left-2 bg-black text-white text-[10px] px-2 py-1 font-bold uppercase">Before</span>
                     </div>
                     <div class="relative">
-                        <img src="https://i.postimg.cc/BnhXwWXN/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-64 object-cover border-l-2 border-gold">
+                        <img src="https://i.postimg.cc/26x0Zk0z/f9edd92a-4c89-48c6-b2e1-a6a9583c1dc9.jpg" class="w-full h-64 object-cover border-l-2 border-gold">
                         <span class="absolute top-2 left-2 bg-gold text-black text-[10px] px-2 py-1 font-bold uppercase">After</span>
                     </div>
                 </div>
@@ -135,7 +143,9 @@
     </section>
 
     <footer class="bg-black text-white py-12 text-center">
-        <h1 class="text-3xl font-bold mb-4 uppercase">Core <span class="text-gold italic">Clean</span></h1>
+        <div class="flex justify-center mb-4">
+             <img src="https://i.postimg.cc/13f3tM9m/1000067391-removebg-preview-Nero-AI-Image-Upscaler-Photo-Face.png" alt="Core Clean Logo" class="company-logo">
+        </div>
         <p class="mb-4 opacity-70"><span class="en">Quality service at an affordable price</span><span class="lt">Kokybiškos paslaugos už prieinamą kainą</span></p>
         <a href="https://wa.me/37064399422" class="text-2xl font-bold text-gold">+370 643 99422</a>
     </footer>
